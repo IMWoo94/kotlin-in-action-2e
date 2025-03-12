@@ -1,6 +1,4 @@
-package com.example.kotlinInAction.methodsAndCall
-
-import strings.lastChar
+package com.example.kotlinInAction.extensionMethodAndProperty
 
 @JvmOverloads
 fun <T> joinToString(
@@ -42,9 +40,6 @@ fun main() {
 
     println(joinToString(list))
     println(joinToString(list, prefix = "(", postifx = ")"))
-
-    val receivedObject = "test"
-    println(receivedObject.lastChar())
 
     println(list.joinToStringByCollection())
 }

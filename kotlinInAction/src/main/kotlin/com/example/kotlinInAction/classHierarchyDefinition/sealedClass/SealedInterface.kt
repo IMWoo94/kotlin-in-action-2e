@@ -27,5 +27,10 @@ fun sealedToggle(toggleable: SealedToggleable): Int {
             toggleable.toggle()
             return 2
         }
+
+        is SealedToggleAllowed -> {
+            toggleable.toggle()
+            return 3
+        }
     }
 }

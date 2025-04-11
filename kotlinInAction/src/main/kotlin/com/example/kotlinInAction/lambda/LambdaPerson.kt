@@ -18,5 +18,6 @@ fun findTheOldest(people: List<LambdaPerson>) {
 
 fun main() {
     val people = listOf(LambdaPerson("Alice", 29), LambdaPerson("Bob", 31))
-    findTheOldest(people)
+//    findTheOldest(people)
+    println(people.maxByOrNull { it.age })
 }

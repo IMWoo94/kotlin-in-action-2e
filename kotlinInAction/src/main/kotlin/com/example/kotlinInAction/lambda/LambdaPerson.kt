@@ -20,4 +20,17 @@ fun main() {
     val people = listOf(LambdaPerson("Alice", 29), LambdaPerson("Bob", 31))
 //    findTheOldest(people)
     println(people.maxByOrNull { it.age })
+    println(people.maxByOrNull(LambdaPerson::age))
+    println(people.maxByOrNull({ p: LambdaPerson -> p.age }))
+    println(people.maxByOrNull() { p: LambdaPerson -> p.age })
+    println(people.maxByOrNull { p: LambdaPerson -> p.age })
+    println(people.maxByOrNull { p -> p.age })
+
+    val names = people.joinToString(
+        separator = " ",
+        transform = { p: LambdaPerson -> p.name }
+    )
+    val simpleNames = people.joinToString(" |") { p: LambdaPerson -> p.name }
+    println(names)
+    println(simpleNames)
 }
